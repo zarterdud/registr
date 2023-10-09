@@ -1,0 +1,11 @@
+{% extends 'templates/base.html' %}
+<head>
+  <title>Регистрация</title>
+</head>
+{% block body %}
+  <h2>Регистрация</h2>
+  <form method="post">{% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Зарегистрироваться">    
+  </form>
+{% endblock %}
